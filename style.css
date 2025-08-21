@@ -253,7 +253,7 @@ h2 {
 .card {
   flex: 1 1 300px; /* flexible, minimum width 300px */
   max-width: 350px;
-  background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+  background: linear-gradient(to bottom, #26e305, #168203);
   border-radius: 12px;
   padding: 2em 1.2em;
   margin: 12px;
@@ -297,7 +297,7 @@ h2 {
   height: 2em;
   top: 0;
   right: 0;
-  background: linear-gradient(135deg, #6293c8, #384c6c);
+  background: linear-gradient(135deg, #363535, #0000);
   border-radius: 0 4px 0 32px;
   overflow: hidden;
 }
@@ -316,7 +316,7 @@ h2 {
   z-index: -1;
   top: 0;
   right: 0;
-  background: linear-gradient(135deg, #364a60, #384c6c);
+  background: linear-gradient(135deg, #111721, #070a0d);
   height: 2em;
   width: 2em;
   border-radius: 0 4px 0 32px;
@@ -326,16 +326,16 @@ h2 {
 }
 
 .card:hover:before {
-  transform: scale(40); /* bigger to cover full card */
+  transform: scale(50); /* bigger to cover full card */
 }
 
 
 .card:hover .card-title {
-  color: #ffffff;
+  color: #e4f52f;
 }
 
 .card:hover .small-desc {
-  color: rgba(255, 255, 255, 0.85);
+  color: #e4f52f;
 }
 
 
