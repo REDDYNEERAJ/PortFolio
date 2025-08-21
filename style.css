@@ -417,23 +417,23 @@ footer {
 
 .button__text > span {
   position: absolute;
-  transform: rotate(calc(30deg * var(--index)));
-  inset: 7px;
+  left: 50%;
+  top: 50%;
+  transform: rotate(calc(30deg * var(--index))) 
+             translate(40px) 
+             rotate(calc(-30deg * var(--index)));
+  transform-origin: center;
 }
 
-.button__circle {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  background: #fff;
-  color: #7808d0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.button__circle svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: color 0.3s ease;
 }
-
+.button:hover .button__circle {
+  color: #000; /* changes icon color on hover */
+}
 .button__icon--copy {
   position: absolute;
   transform: translate(-150%, 150%);
