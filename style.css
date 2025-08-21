@@ -419,10 +419,10 @@ footer {
     animation: text-rotation 8s linear infinite;
     
     & > span {
-        position: absolute;
-        transform: rotate(calc(19deg * var(--index)));
-        transform-origin: center center;
-        inset: 7px;
+      position: absolute;
+      transform: rotate(calc(20deg * var(--index))) translateY(-40px); /* push letters outward */
+      inset: 0;
+      transform-origin: center center;
     }
 }
 
