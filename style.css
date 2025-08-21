@@ -421,9 +421,13 @@ footer {
 
 .button__text span {
   position: absolute;
-  transform: rotate(calc(19deg * var(--index)));
-  inset: 7px;
+  /* put the letter at a circle radius */
+  left: 50%;
+  top: 50%;
+  transform: rotate(calc(20deg * var(--index))) translate(40px) rotate(calc(-20deg * var(--index)));
+  transform-origin: center;
 }
+
 
 .button__circle {
   position: relative;
