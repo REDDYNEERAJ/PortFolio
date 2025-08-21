@@ -389,69 +389,69 @@ footer {
 
 .social-buttons {
   display: flex;
-  gap: 24px;
   justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-/* Base button */
 .button {
   cursor: pointer;
-  border: none;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   background: #7808d0;
   color: #fff;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  position: relative;
-  display: grid;
-  place-content: center;
-  transition: background 300ms, transform 200ms;
-  font-weight: 600;
   text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
 }
 
-/* Rotating ring */
-.button__text {
-  position: absolute;
-  inset: 0;
-  animation: text-rotation 8s linear infinite;
+.button:hover {
+  background: #000;
+  transform: scale(1.05);
 }
 
-.button__text > span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform:
-    translate(-50%, -50%)
-    rotate(calc(360deg / 18 * var(--index)))
-    translate(38px)
-    rotate(calc(-360deg / 18 * var(--index)));
-  transform-origin: center;
-  font-size: 13px;
-}
-
-/* Center logo circle */
 .button__circle {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
+  width: 50px;
+  height: 50px;
   background: #fff;
   color: #7808d0;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
-.button__icon { fill: currentColor; transition: color 0.3s ease; }
-.button__icon--copy { position: absolute; transform: translate(-150%,150%); }
+.button__icon {
+  width: 22px;
+  height: 22px;
+}
 
-/* Hover effects */
-.button:hover { background:#000; transform:scale(1.05); }
-.button:hover .button__icon:first-child { transition:transform .3s ease-in-out; transform:translate(150%,-150%); }
-.button:hover .button__icon--copy { transition:transform .3s ease-in-out .1s; transform:translate(0); }
-.button:hover .button__circle { color:#000; }
+.button__text {
+  position: absolute;
+  inset: 0;
+  animation: text-rotation 12s linear infinite;
+  pointer-events: none;
+}
 
-@keyframes text-rotation { to { rotate:360deg; } }
+.button__text span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 12px;
+  text-transform: uppercase;
+  transform:
+    rotate(calc(360deg / var(--count) * var(--index)))
+    translate(46px)  /* radius of circular text */
+    rotate(calc(-360deg / var(--count) * var(--index))); /* keep upright */
+}
+
+@keyframes text-rotation {
+  to { rotate: 360deg; }
+}
+
