@@ -195,7 +195,7 @@ footer {
 #svg-global {
   position: absolute;
   right: 100px;          /* distance from right edge */
-  top: 50%;             /* center vertically */
+  top: 30%;/* center vertically */
   transform: translateY(-50%) scale(1.5); /* keep zoom & center */
   overflow: visible;
   z-index: 10; 
