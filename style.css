@@ -15,12 +15,7 @@ body {
 More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
  */
 
-.body {
-  position: absolute;
-  inset: 0;
-}
-
-.body::before {
+body::before {
   content: "";
   position: absolute;
   inset: -145%;
