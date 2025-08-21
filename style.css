@@ -94,7 +94,7 @@ h2::before {
   position: absolute;
   inset: -145%;
   rotate: -45deg;
-  background: #000000;
+  background: transparent;
   background-image: radial-gradient(4px 100px at 0px 235px, rgb(255, 140, 17), #0000),
     radial-gradient(4px 100px at 300px 235px, rgb(255, 119, 0), #884e2800),
     radial-gradient(1.5px 1.5px at 150px 117.5px, rgb(255, 144, 9) 100%, #0000 150%),
