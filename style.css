@@ -419,6 +419,7 @@ footer {
 
 .button__text > span {
     position: absolute;
+    margin-bottom:5px;
     transform: rotate(calc(19deg * var(--index)));
     inset: 7px;
 }
