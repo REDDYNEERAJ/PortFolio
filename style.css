@@ -19,30 +19,48 @@ body::before {
   height: 300%;
   transform: rotate(-45deg);
   background: #000;
+
   background-image:
-    /* Dots come first (so they appear on top) */
+    /* Dots (always on top) */
     radial-gradient(2px 2px at 150px 117.5px, #00ff00 100%, transparent 150%),
     radial-gradient(2px 2px at 150px 126px, #00ff00 100%, transparent 150%),
 
-    /* Then the rays */
+    /* Green rays */
     radial-gradient(4px 100px at 0px 235px, #00ff00, transparent),
     radial-gradient(4px 100px at 300px 235px, #00ff00, transparent),
     radial-gradient(4px 100px at 0px 252px, #00ff00, transparent),
-    radial-gradient(4px 100px at 300px 252px, #00ff00, transparent);
+    radial-gradient(4px 100px at 300px 252px, #00ff00, transparent),
 
-  background-size: 300px 200px;
-  animation: hi 120s linear infinite;
+    /* More green rays */
+    radial-gradient(4px 100px at 100px 200px, #00ff00, transparent),
+    radial-gradient(4px 100px at 250px 300px, #00ff00, transparent),
+
+    /* ~20% random yellow rays */
+    radial-gradient(4px 100px at 50px 180px, #e4f52f, transparent),
+    radial-gradient(4px 100px at 200px 280px, #e4f52f, transparent);
+
+  background-size: 300px 300px;
+  animation: raysMove 60s linear infinite;
   z-index: -1;
   filter: brightness(2) saturate(2);
+  opacity: 0.9;
 }
 
-/* Background animation */
-@keyframes hi {
-  0% {
-    background-position: 0px 0px, 50px 50px, 100px 100px;
+/* Multiple speeds */
+@keyframes raysMove {
+  from {
+    background-position:
+      0px 0px, 0px 0px,  /* dots */
+      0px 0px, 0px 0px, 0px 0px, 0px 0px,  /* rays group 1 */
+      0px 0px, 0px 0px,  /* rays group 2 */
+      0px 0px, 0px 0px;  /* yellow rays */
   }
-  100% {
-    background-position: 0px 4000px, 50px 4050px, 100px 4100px;
+  to {
+    background-position:
+      0px 0px, 0px 0px,  /* dots stay static */
+      0px 800px, 20px 1000px, 40px 1200px, 60px 1400px,  /* rays group 1 different speeds */
+      80px 900px, 120px 1100px,  /* rays group 2 */
+      160px 950px, 200px 1250px; /* yellow rays */
   }
 }
 
