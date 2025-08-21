@@ -1,86 +1,46 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  background: #121212; /* fallback */
-  color: #e0e0e0;
   position: relative;
-  overflow-x: hidden;
-  z-index: 0;
-}
-
-/* Neon green animated background */
-body {
   margin: 0;
   background: #000; /* fallback */
-  position: relative;
-  overflow-x: hidden;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  z-index: 0;
 }
 
 body::before {
   content: "";
   position: absolute;
-  inset: -145%;
+  inset: 0;        /* fit exactly inside body */
   rotate: -45deg;
-  background: #000000;
-  z-index: -1;
+  z-index: -1;     /* behind content */
 
-  /* Rays + aligned dots */
+  background: #000;
   background-image:
     radial-gradient(4px 100px at 0px 235px, #00ff00, transparent),
     radial-gradient(4px 100px at 300px 235px, #00ff00, transparent),
-    radial-gradient(1.5px 1.5px at 150px 335px, #00ff00 100%, transparent 150%), /* dot aligned */
-
-    radial-gradient(4px 100px at 0px 252px, #00ff00, transparent),
-    radial-gradient(4px 100px at 300px 252px, #e4f52f, transparent), /* yellow ray */
-    radial-gradient(1.5px 1.5px at 150px 352px, #00ff00 100%, transparent 150%), /* dot aligned */
-
+    radial-gradient(1.5px 1.5px at 150px 117.5px, #00ff00 100%, transparent 150%),
+    radial-gradient(4px 100px at 0px 252px, #e4f52f, transparent),
+    radial-gradient(4px 100px at 300px 252px, #e4f52f, transparent),
+    radial-gradient(1.5px 1.5px at 150px 126px, #e4f52f 100%, transparent 150%),
     radial-gradient(4px 100px at 0px 150px, #00ff00, transparent),
     radial-gradient(4px 100px at 300px 150px, #00ff00, transparent),
-    radial-gradient(1.5px 1.5px at 150px 250px, #00ff00 100%, transparent 150%),
+    radial-gradient(1.5px 1.5px at 150px 75px, #00ff00 100%, transparent 150%);
 
-    radial-gradient(4px 100px at 0px 204px, #00ff00, transparent),
-    radial-gradient(4px 100px at 300px 204px, #00ff00, transparent),
-    radial-gradient(1.5px 1.5px at 150px 304px, #00ff00 100%, transparent 150%),
-
-    radial-gradient(4px 100px at 0px 299px, #00ff00, transparent),
-    radial-gradient(4px 100px at 300px 299px, #00ff00, transparent),
-    radial-gradient(1.5px 1.5px at 150px 399px, #00ff00 100%, transparent 150%),
-
-    /* Some yellow ones */
-    radial-gradient(4px 100px at 0px 215px, #e4f52f, transparent),
-    radial-gradient(4px 100px at 300px 215px, #e4f52f, transparent),
-    radial-gradient(1.5px 1.5px at 150px 315px, #e4f52f 100%, transparent 150%);
-  
-  background-size:
-    300px 235px, 300px 235px, 300px 235px,
-    300px 252px, 300px 252px, 300px 252px,
-    300px 150px, 300px 150px, 300px 150px,
-    300px 204px, 300px 204px, 300px 204px,
-    300px 299px, 300px 299px, 300px 299px,
-    300px 215px, 300px 215px, 300px 215px;
-
-  animation: hi 120s linear infinite;
+  background-size: 300px 235px;
+  animation: hi 150s linear infinite;
 }
 
+/* Keyframes */
 @keyframes hi {
   0% {
-    background-position:
-      0px 220px, 3px 220px, 150px 320px,
-      25px 24px, 28px 24px, 150px 340px,
-      50px 16px, 53px 16px, 150px 240px,
-      75px 224px, 78px 224px, 150px 290px,
-      100px 19px, 103px 19px, 150px 380px,
-      125px 120px, 128px 120px, 150px 310px;
+    background-position: 0px 220px, 3px 220px, 151.5px 337.5px,
+      25px 24px, 28px 24px, 176.5px 150px,
+      50px 16px, 53px 16px, 201.5px 91px;
   }
   100% {
-    background-position:
-      0px 6800px, 3px 7000px, 150px 7100px,
-      25px 13632px, 28px 13700px, 150px 13800px,
-      50px 5416px, 53px 5500px, 150px 5600px,
-      75px 17175px, 78px 17250px, 150px 17350px,
-      100px 5119px, 103px 5200px, 150px 5300px,
-      125px 8428px, 128px 8500px, 150px 8600px;
+    background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px,
+      25px 13632px, 28px 13632px, 176.5px 13758px,
+      50px 5416px, 53px 5416px, 201.5px 5491px;
   }
 }
 
