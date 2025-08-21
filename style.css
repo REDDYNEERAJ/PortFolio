@@ -387,7 +387,13 @@ footer {
 
 
 
-/* From Uiverse.io by Creatlydev */ 
+.social-buttons {
+  display: flex;
+  gap: 20px; /* space between buttons */
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .button {
   cursor: pointer;
   border: none;
@@ -404,18 +410,19 @@ footer {
     background 300ms,
     transform 200ms;
   font-weight: 600;
+  text-decoration: none; /* remove underline for <a> */
 }
 
 .button__text {
   position: absolute;
   inset: 0;
   animation: text-rotation 8s linear infinite;
+}
 
-  > span {
-    position: absolute;
-    transform: rotate(calc(19deg * var(--index)));
-    inset: 7px;
-  }
+.button__text span {
+  position: absolute;
+  transform: rotate(calc(19deg * var(--index)));
+  inset: 7px;
 }
 
 .button__circle {
@@ -429,6 +436,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.button__icon {
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
 }
 
 .button__icon--copy {
@@ -460,3 +472,4 @@ footer {
     rotate: 360deg;
   }
 }
+
