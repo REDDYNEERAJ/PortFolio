@@ -313,7 +313,7 @@ h2 {
 }
 
 .card:hover:before {
-  transform: scale(28);
+  transform: scale(35);
 }
 
 .card:hover .small-desc {
