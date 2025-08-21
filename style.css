@@ -11,11 +11,13 @@ body {
 header {
   background: #1e1e1e;
   color: #f5f5f5;
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: 2px solid #00ff88;
+  padding: 20px;
+  position: relative;   /* allows absolutely positioning children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 header h1 {
   margin: 0;
   font-size: 2.5rem;
