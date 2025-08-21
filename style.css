@@ -398,8 +398,8 @@ footer {
 .button {
     cursor: pointer;
     border: none;
-    background: #7808d0;
-    color: #fff;
+    background: #20C20E;
+    color: #e4f52f;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -415,31 +415,20 @@ footer {
 
 /* You can keep your other rules. Just add/replace these: */
 
-/* set a comfortable radius for 100x100 with a 40px center logo */
-.button { --ring-radius: 34px; } /* try 32–36 if you want to fine-tune */
+/* set a comfortable radius for 100x100 with a 40px center logo *//* try 32–36 if you want to fine-tune */
 
 .button__text {
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  animation: text-rotation 10s linear infinite;
+  animation: text-rotation 8s linear infinite;
+
+  > span {
+    position: absolute;
+    transform: rotate(calc(22deg * var(--index)));
+    inset: 7px;
+  }
 }
 
-/* place each character around the circle, kept upright */
-.button__text > span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 12px;            /* 11–13 works well */
-  line-height: 1;
-  transform:
-    translate(-50%, -50%)
-    rotate(calc(360deg / var(--count) * var(--index)))
-    translate(var(--ring-radius))
-    rotate(calc(-360deg / var(--count) * var(--index)));
-  transform-origin: center;
-  white-space: pre;           /* preserves the dot exactly */
-}
 
 
 
@@ -448,8 +437,8 @@ footer {
     width: 40px;
     height: 40px;
     overflow: hidden;
-    background: #fff;
-    color: #7808d0;
+    background: #e4f52f;
+    color: #20C20E;
     border-radius: 50%;
     display: flex;
     align-items: center;
