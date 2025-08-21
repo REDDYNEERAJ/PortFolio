@@ -1,43 +1,42 @@
-/* Body base */
-/* Body base */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
   background: #121212; /* fallback */
   color: #e0e0e0;
-  position: relative;   /* anchor for ::before */
+  position: relative;
   overflow-x: hidden;
   z-index: 0;
 }
 
-/* Animated background behind content */
+/* Neon green animated background */
 body::before {
   content: "";
-  position: absolute;  /* follows text height */
-  inset: 0;            /* stretch across body */
+  position: absolute;
+  inset: 0;
   rotate: -45deg;
   background: #000;
   background-image: 
-    radial-gradient(4px 100px at 0px 235px, #0f0, transparent),
-    radial-gradient(4px 100px at 300px 235px, #0f0, transparent),
-    radial-gradient(1.5px 1.5px at 150px 117.5px, #0f0 100%, transparent 150%),
-    radial-gradient(4px 100px at 0px 252px, #0f0, transparent),
-    radial-gradient(4px 100px at 300px 252px, #0f0, transparent),
-    radial-gradient(1.5px 1.5px at 150px 126px, #0f0 100%, transparent 150%);
-  background-size: 300px 235px;
-  animation: hi 150s linear infinite;
-  z-index: -1;   /* behind all text */
-  opacity: 0.25; /* subtle */
+    radial-gradient(4px 100px at 0px 235px, #00ff00, transparent),
+    radial-gradient(4px 100px at 300px 235px, #00ff00, transparent),
+    radial-gradient(2px 2px at 150px 117.5px, #00ff00 100%, transparent 150%),
+    radial-gradient(4px 100px at 0px 252px, #00ff00, transparent),
+    radial-gradient(4px 100px at 300px 252px, #00ff00, transparent),
+    radial-gradient(2px 2px at 150px 126px, #00ff00 100%, transparent 150%);
+  background-size: 200px 150px;  /* smaller -> denser, no gaps */
+  animation: hi 60s linear infinite;
+  z-index: -1;
+  opacity: 1; /* make it fully visible */
+  filter: brightness(1.5) saturate(2); /* glowing bright */
 }
 
 /* Background animation */
 @keyframes hi {
   0% {
-    background-position: 0px 220px, 3px 220px, 151.5px 337.5px;
+    background-position: 0px 0px, 50px 50px, 100px 100px;
   }
   100% {
-    background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px;
+    background-position: 0px 4000px, 50px 4050px, 100px 4100px;
   }
 }
 
