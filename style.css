@@ -314,20 +314,21 @@ h2 {
   content: '';
   position: absolute;
   z-index: -1;
-  top: -16px;
-  right: -16px;
+  top: 0;
+  right: 0;
   background: linear-gradient(135deg, #364a60, #384c6c);
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
+  height: 2em;
+  width: 2em;
+  border-radius: 0 4px 0 32px;
   transform: scale(1);
-  transform-origin: top right;
+  transform-origin: top right; /* expand from go-corner */
   transition: transform 0.35s ease-out;
 }
 
 .card:hover:before {
-  transform: scale(35);
+  transform: scale(40); /* bigger to cover full card */
 }
+
 
 .card:hover .card-title {
   color: #ffffff;
