@@ -1,10 +1,38 @@
 /* General Styling */
+/* Body Base */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
-  background: #121212; /* Dark background */
-  color: #e0e0e0;      /* Light text */
+  background: #121212; /* fallback dark background */
+  color: #e0e0e0;
+  position: relative;
+  z-index: 0;
+}
+
+/* Animated dot background for the entire body */
+body::before {
+  content: "";
+  position: fixed;   /* stays fixed while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #00ff88 1px, transparent 1px);
+  background-size: 20px 20px; /* spacing of dots */
+  animation: scroll-bg 15s linear infinite;
+  z-index: -1;  /* ensures it's behind everything */
+  opacity: 0.15; /* subtle effect */
+}
+
+/* Background scroll animation */
+@keyframes scroll-bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 100px;
+  }
 }
 
 /* Header */
