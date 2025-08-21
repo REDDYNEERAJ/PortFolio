@@ -83,59 +83,33 @@ h2 {
   color: #00ff88;
   border-bottom: 2px solid #00ff88;
   display: inline-block;
-  padding: 10px 15px;   /* extra padding so the background is visible */
-  overflow: hidden;     /* keeps background inside */
-  z-index: 1;           /* keep text above */
+  padding: 10px 15px;
+  overflow: hidden;
+  z-index: 1;
 }
 
-/* animated glowing background */
+/* Animated hacker-green glowing dots */
 h2::before {
   content: "";
   position: absolute;
-  inset: -145%;
-  rotate: -45deg;
-  background: transparent;
-  background-image: radial-gradient(4px 100px at 0px 235px, rgb(255, 140, 17), #0000),
-    radial-gradient(4px 100px at 300px 235px, rgb(255, 119, 0), #884e2800),
-    radial-gradient(1.5px 1.5px at 150px 117.5px, rgb(255, 144, 9) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 252px, rgb(156, 14, 137), #0000),
-    radial-gradient(4px 100px at 300px 252px, rgb(23, 41, 206), #0000),
-    radial-gradient(1.5px 1.5px at 150px 126px, rgb(247, 102, 18) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 150px, rgb(249, 121, 16), #0000),
-    radial-gradient(4px 100px at 300px 150px, rgb(255, 128, 18), #0000),
-    radial-gradient(1.5px 1.5px at 150px 75px, rgb(255, 116, 10) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 253px, rgb(249, 137, 17), #0000),
-    radial-gradient(4px 100px at 300px 253px, rgb(248, 107, 14), #0000),
-    radial-gradient(1.5px 1.5px at 150px 126.5px, rgb(252, 129, 14) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 204px, rgb(234, 115, 18), #0000),
-    radial-gradient(4px 100px at 300px 204px, rgb(255, 139, 6), #0000),
-    radial-gradient(1.5px 1.5px at 150px 102px, rgb(255, 128, 9) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 134px, rgb(249, 133, 9), #0000),
-    radial-gradient(4px 100px at 300px 134px, rgb(251, 125, 15), #0000),
-    radial-gradient(1.5px 1.5px at 150px 67px, rgb(255, 146, 13) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 179px, rgb(249, 137, 17), #0000),
-    radial-gradient(4px 100px at 300px 179px, rgb(253, 122, 6), #0000),
-    radial-gradient(1.5px 1.5px at 150px 89.5px, rgb(234, 132, 7) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 299px, rgb(255, 115, 0), #0000),
-    radial-gradient(4px 100px at 300px 299px, rgb(255, 136, 0), #0000),
-    radial-gradient(1.5px 1.5px at 150px 149.5px, rgb(255, 123, 0) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 215px, rgb(255, 145, 0), #0000),
-    radial-gradient(4px 100px at 300px 215px, rgb(255, 132, 0), #0000),
-    radial-gradient(1.5px 1.5px at 150px 107.5px, rgb(255, 136, 0) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 281px, rgb(255, 170, 0), #0000),
-    radial-gradient(4px 100px at 300px 281px, rgb(255, 115, 0), #0000),
-    radial-gradient(1.5px 1.5px at 150px 140.5px, rgb(255, 119, 0) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 158px, rgb(255, 123, 0), #0000),
-    radial-gradient(4px 100px at 300px 158px, rgb(255, 132, 0), #0000),
-    radial-gradient(1.5px 1.5px at 150px 79px, rgb(255, 149, 0) 100%, #0000 150%),
-    radial-gradient(4px 100px at 0px 210px, rgb(255, 123, 0), #0000),
-    radial-gradient(4px 100px at 300px 210px, rgb(255, 162, 0), #0000),
-    radial-gradient(1.5px 1.5px at 150px 105px, rgb(255, 136, 0) 100%, #0000 150%);
-  background-size: 300px 235px;
-  animation: hi 150s linear infinite;
-  z-index: -1; /* behind text */
-  opacity: 0.15; /* subtle effect */
+  inset: 0;
+  background-image: radial-gradient(circle, #00ff88 1px, transparent 1px);
+  background-size: 20px 20px; /* density of dots */
+  animation: scroll-bg 15s linear infinite;
+  z-index: -1;
+  opacity: 0.25; /* make it subtle */
 }
+
+/* Background scroll animation */
+@keyframes scroll-bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 100px;
+  }
+}
+
 
 
 /* Skills Grid */
