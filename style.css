@@ -326,7 +326,7 @@ h2 {
 }
 
 .card:hover:before {
-  transform: scale(50); /* bigger to cover full card */
+  transform: scale(75); /* bigger to cover full card */
 }
 
 
