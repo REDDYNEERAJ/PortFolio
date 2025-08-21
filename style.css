@@ -418,13 +418,12 @@ footer {
     inset: 0;
     animation: text-rotation 8s linear infinite;
     
-  .button__text > span {
-    position: absolute;
-    transform: rotate(calc(20deg * var(--index))) translateY(-40px); /* push letters outward */
-    inset: 0;
-    transform-origin: center center;
+    & > span {
+        position: absolute;
+        transform: rotate(calc(19deg * var(--index)));
+        inset: 7px;
+    }
 }
-
 
 .button__circle {
     position: relative;
