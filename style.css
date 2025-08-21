@@ -425,7 +425,7 @@ footer {
   > span {
     position: absolute;
     transform: rotate(calc(22deg * var(--index)));
-    inset: 1px;
+    inset: 0px;
   }
 }
 
