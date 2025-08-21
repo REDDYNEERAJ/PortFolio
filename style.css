@@ -412,26 +412,16 @@ footer {
 }
 
 /* Rotating ring */
-.button__text{
-  position:absolute;
-  inset:0;
-  animation:text-rotation 8s linear infinite;
-  pointer-events:none;
-  font-size:14px;
-  font-weight:bold;
-  white-space:nowrap;
-}
+.button__text {
+  position: absolute;
+  inset: 0;
+  animation: text-rotation 8s linear infinite;
 
-/* Letters close together around ring */
-.button__text > span{
-  position:absolute;
-  left:50%; top:50%;
-  transform:
-    translate(-50%, -50%)
-    rotate(calc((360deg / (var(--count) * 1.8)) * var(--index))) /* tighter spacing */
-    translate(28px) /* smaller radius so letters are closer */
-    rotate(calc(-360deg / (var(--count) * 1.8) * var(--index)));
-  transform-origin:center;
+  > span {
+    position: absolute;
+    transform: rotate(calc(19deg * var(--index)));
+    inset: 7px;
+  }
 }
 
 
