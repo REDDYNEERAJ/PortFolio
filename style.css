@@ -419,13 +419,13 @@ footer {
 
 .button__text {
   position: absolute;
-  inset: 0;
+  inset: 0px;
   animation: text-rotation 8s linear infinite;
 
   > span {
     position: absolute;
     transform: rotate(calc(22deg * var(--index)));
-    inset: 7px;
+    inset: 2px;
   }
 }
 
