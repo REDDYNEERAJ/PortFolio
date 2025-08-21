@@ -387,28 +387,28 @@ footer {
 
 
 
-.social-buttons{
-  display:flex;
-  gap:24px;
-  justify-content:center;
+.social-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
 }
 
 /* Base button */
-.button{
-  --r: 36px;                 /* ring radius for letters */
-  cursor:pointer;
-  border:none;
-  background:#7808d0;
-  color:#fff;
-  width:100px;height:100px;
-  border-radius:50%;
-  overflow:hidden;
-  position:relative;
-  display:grid;
-  place-content:center;
-  transition:background 300ms, transform 200ms;
-  font-weight:600;
-  text-decoration:none;      /* because they're <a> */
+.button {
+  cursor: pointer;
+  border: none;
+  background: #7808d0;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-content: center;
+  transition: background 300ms, transform 200ms;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* Rotating ring */
@@ -416,35 +416,42 @@ footer {
   position: absolute;
   inset: 0;
   animation: text-rotation 8s linear infinite;
-
-  > span {
-    position: absolute;
-    transform: rotate(calc(19deg * var(--index)));
-    inset: 7px;
-  }
 }
 
-
+.button__text > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:
+    translate(-50%, -50%)
+    rotate(calc(360deg / 18 * var(--index)))
+    translate(38px)
+    rotate(calc(-360deg / 18 * var(--index)));
+  transform-origin: center;
+  font-size: 13px;
+}
 
 /* Center logo circle */
-.button__circle{
-  position:relative;
-  width:40px;height:40px;
-  overflow:hidden;
-  background:#fff;
-  color:#7808d0;             /* icon color via currentColor */
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
+.button__circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background: #fff;
+  color: #7808d0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Icons */
-.button__icon{ fill:currentColor; transition:color .3s ease; }
-.button__icon--copy{ position:absolute; transform:translate(-150%,150%); }
+.button__icon { fill: currentColor; transition: color 0.3s ease; }
+.button__icon--copy { position: absolute; transform: translate(-150%,150%); }
 
-/* Hover: bg zoom + icon swap + color change */
-.button:hover{ background:#000; transform:scale(1.05); }
-.button:hover .button__icon:first-child{ transition:transform .3s ease-in-out; transform:translate(150%,-150%); }
-.button:hover .button__icon--copy{ transition:transform .3s ease-in-out .1s; transform:translate(0); }
-.button:hover .button__circle{ color:#000; } /* icon turns black */
+/* Hover effects */
+.button:hover { background:#000; transform:scale(1.05); }
+.button:hover .button__icon:first-child { transition:transform .3s ease-in-out; transform:translate(150%,-150%); }
+.button:hover .button__icon--copy { transition:transform .3s ease-in-out .1s; transform:translate(0); }
+.button:hover .button__circle { color:#000; }
 
 @keyframes text-rotation { to { rotate:360deg; } }
