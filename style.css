@@ -426,10 +426,10 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: rotate(calc(20deg * var(--index))) translateY(-42px); /* distance from center */
+    transform: rotate(calc(18deg * var(--index))) translateY(-34px); /* tighter circle */
     transform-origin: center center;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 11px;  /* slightly smaller so fits in 100px */
+    letter-spacing: 0.5px;
     color: #fff;
 }
 
