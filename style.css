@@ -308,7 +308,7 @@ h2 {
   backdrop-filter: blur(10px);
   border-radius: 10px;
   z-index: 1;
-  color: #000000;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
