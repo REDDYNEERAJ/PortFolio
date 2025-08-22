@@ -263,8 +263,8 @@ h2 {
 /* From Uiverse.io by Codewithvinay */ 
 .box {
  position: relative;
- width: 100px;
- height: 90px;
+ width: 90px;
+ height: 75px;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -276,9 +276,9 @@ h2 {
  content: ' ';
  position: absolute;
  top: 0;
- left: 50px;
- width: 50%;
- height: 120%;
+ left: 0px;
+ width: 60%;
+ height: 150%;
  text-decoration: none;
  background: #fff;
  border-radius: 8px;
@@ -290,9 +290,9 @@ h2 {
  content: '';
  position: absolute;
  top: 0;
- left: 50;
- width: 50%;
- height: 120%;
+ left: 0px;
+ width: 60%;
+ height: 150%;
  background: #fff;
  border-radius: 8px;
  transform: skewX(15deg);
@@ -302,7 +302,7 @@ h2 {
 
 .box:hover:before,
 .box:hover:after {
- transform: skewX(0deg) scaleX(1.3);
+ transform: skewX(0deg) scaleX(1.5);
 }
 
 .box:before,
@@ -371,7 +371,7 @@ h2 {
 
 .box .content {
  position: relative;
- width: 100px;
+ width: 90px;
  height: 75px;
  padding: 20px 40px;
  background: rgba(255, 255, 255, 0.05);
