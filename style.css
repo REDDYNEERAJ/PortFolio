@@ -254,16 +254,16 @@ h2 {
 /* Layout: no horizontal scroll; wraps to new lines if needed */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
   justify-items: center;
 }
 
 /* Card look (matches the screenshot) */
 .box {
   position: relative;
-  width: 220px;
-  height: 300px;
+  width: 150px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,8 +318,8 @@ h2 {
 /* glass inner panel */
 .box .content {
   position: relative;
-  width: 190px;
-  height: 254px;
+  width: 150px;
+  height: 90px;
   padding: 20px;
   border-radius: 12px;
   background: rgba(255,255,255,0.06);
@@ -342,7 +342,7 @@ h2 {
 .box:hover { transform: translateY(-6px); }
 
 /* Responsive tweak so they still look like the screenshot on small screens */
-@media (max-width: 520px) {
+@media (max-width: 150px) {
   .skills-grid { grid-template-columns: 1fr; }
 }
 
