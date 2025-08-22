@@ -565,22 +565,13 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background: linear-gradient(
-    120deg,
-    #2a2a2a 30%,
-    #3a3a3a 38%,
-    #3a3a3a 40%,
-    #2a2a2a 48%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  animation: load89234 2s infinite;
 }
 
 .card_load_extreme_title {
   font-size: 1.2em;
   font-weight: bold;
   color: #fff01f;  /* neon yellow */
+  border-radius: 5px;
   background: linear-gradient(
     120deg,
     #2a2a2a 30%,
@@ -597,6 +588,7 @@ h2 {
   font-size: 0.9em;
   line-height: 1.3;
   color: #ddd;
+  border-radius: 5px;
   background: linear-gradient(
     120deg,
     #2a2a2a 30%,
