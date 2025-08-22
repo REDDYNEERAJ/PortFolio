@@ -321,6 +321,7 @@ h2 {
 .box .content h2 {
   font-size: 16px;
   color: #fff;
+  border-bottom: none; 
   margin: 0;
   line-height: 1.4;
 }
