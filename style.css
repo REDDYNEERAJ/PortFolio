@@ -572,6 +572,8 @@ h2 {
     #3a3a3a 40%,
     #2a2a2a 48%
   );
+  background-size: 200% 100%;
+  background-position: 100% 0;
   animation: load89234 2s infinite;
 }
 
@@ -586,6 +588,8 @@ h2 {
     #3a3a3a 40%,
     #2a2a2a 48%
   );
+  background-size: 200% 100%;
+  background-position: 100% 0;
   animation: load89234 2s infinite;
 }
 
@@ -600,6 +604,9 @@ h2 {
     #3a3a3a 40%,
     #2a2a2a 48%
   );
+  margin-top: 10px;
+  background-size: 200% 100%;
+  background-position: 100% 0;
   animation: load89234 2s infinite;
 }
 
