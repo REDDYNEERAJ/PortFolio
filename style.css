@@ -524,21 +524,21 @@ h2 {
   margin-top: 6px;
 }
 .certificationcards .cercard:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
 }
 .certificationcards .ocercard:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
 }
 
 .certificationcards:hover > .cercard:not(:hover) {
   filter: blur(4px);
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 .certificationcards:hover > .ocercard:not(:hover) {
   filter: blur(4px);
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 
 /* Contact Links */
