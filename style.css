@@ -477,7 +477,7 @@ h2 {
   justify-content: center;
 }
 
-.certificationcards .card {
+.certificationcards .cercard {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,22 +493,22 @@ h2 {
   box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
 }
 
-.certificationcards .card p.tip {
+.certificationcards .cercard p.tip {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-.certificationcards .card p.second-text {
+.certificationcards .cercard p.second-text {
   font-size: 0.85em;
   margin-top: 6px;
 }
 
-.certificationcards .card:hover {
+.certificationcards .cercard:hover {
   transform: scale(1.1);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
 }
 
-.certificationcards:hover > .card:not(:hover) {
+.certificationcards:hover > .cercard:not(:hover) {
   filter: blur(4px);
   transform: scale(0.95);
 }
