@@ -257,7 +257,6 @@ h2 {
   grid-template-columns: repeat(5, 1fr);
   gap: 80px;              /* space between boxes */
   max-width: 1500px;
-  margin: 0 auto;
   margin-top: 50px
   justify-items: center;
 }
