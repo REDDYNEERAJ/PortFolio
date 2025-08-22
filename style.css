@@ -258,6 +258,7 @@ h2 {
   gap: 80px;              /* space between boxes */
   max-width: 1500px;
   margin: 0 auto;
+  margin-top: 20px
   justify-items: center;
 }
 
