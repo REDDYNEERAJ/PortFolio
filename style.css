@@ -320,9 +320,12 @@ h2 {
 /* Skill text */
 .box .content h2 {
   font-size: 16px;
-  color: #000000;
+  color: #fff;
   margin: 0;
   line-height: 1.4;
+}
+.box:hover .content h2 {
+  color: #000;
 }
 
 /* Decoration glassy boxes */
