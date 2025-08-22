@@ -282,7 +282,7 @@ h2 {
   left: 80;
   width: 50%;
   height: 100%;
-  background: linear-gradient(315deg,  #7bff00, #ffee00);
+  background: linear-gradient(315deg,#ffee00,#7bff00);
   border-radius: 12px;
   transform: skewX(15deg);
   transition: 0.5s;
@@ -308,7 +308,7 @@ h2 {
   backdrop-filter: blur(10px);
   border-radius: 10px;
   z-index: 1;
-  color: #fff;
+  color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,7 +319,7 @@ h2 {
 /* Skill text */
 .box .content h2 {
   font-size: 16px;
-  color: #fff;
+  color: #000000;
   margin: 0;
   line-height: 1.4;
 }
