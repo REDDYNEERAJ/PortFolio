@@ -565,18 +565,42 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  background: linear-gradient(
+    120deg,
+    #2a2a2a 30%,
+    #3a3a3a 38%,
+    #3a3a3a 40%,
+    #2a2a2a 48%
+  );
+  animation: load89234 2s infinite;
 }
 
 .card_load_extreme_title {
   font-size: 1.2em;
   font-weight: bold;
   color: #fff01f;  /* neon yellow */
+  background: linear-gradient(
+    120deg,
+    #2a2a2a 30%,
+    #3a3a3a 38%,
+    #3a3a3a 40%,
+    #2a2a2a 48%
+  );
+  animation: load89234 2s infinite;
 }
 
 .card_load_extreme_descripion {
   font-size: 0.9em;
   line-height: 1.3;
   color: #ddd;
+  background: linear-gradient(
+    120deg,
+    #2a2a2a 30%,
+    #3a3a3a 38%,
+    #3a3a3a 40%,
+    #2a2a2a 48%
+  );
+  animation: load89234 2s infinite;
 }
 
 @keyframes load89234 {
