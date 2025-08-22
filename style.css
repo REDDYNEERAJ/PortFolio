@@ -255,7 +255,7 @@ h2 {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 40px;              /* space between boxes */
+  gap: 80px;              /* space between boxes */
   max-width: 1500px;
   margin: 0 auto;
   justify-items: center;
