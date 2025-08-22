@@ -585,7 +585,7 @@ h2 {
   }
 }
 /* From Uiverse.io by Javierrocadev */ 
-.container {
+.achcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -598,24 +598,24 @@ h2 {
   text-align: center;
 }
 
-.container__star {
+.achcontainer__star {
   transition: all .7s ease-in-out;
 }
 
-.first {
+.achfirst {
   position: absolute;
   top: 20px;
   left: 50px;
   transition: all .7s ease-in-out;
 }
 
-.svg-icon {
+.achsvg-icon {
   position: absolute;
   fill: #e94822;
   z-index: 1;
 }
 
-.star-eight {
+.achstar-eight {
   background: #efd510;
   width: 150px;
   height: 150px;
@@ -624,7 +624,7 @@ h2 {
   animation: rot 3s  infinite;
 }
 
-.star-eight::before {
+.achstar-eight::before {
   content: '';
   position: absolute;
   top: 0;
@@ -635,12 +635,12 @@ h2 {
   transform: rotate(135deg);
 }
 
-.container:hover .container__star {
+.achcontainer:hover .achcontainer__star {
   transform: rotateX(70deg) translateY(250px);
   box-shadow: 0px 0px 120px -100px #e4e727;
 }
 
-.container:hover .svg-icon {
+.achcontainer:hover .achsvg-icon {
   animation: grow 1s linear infinite;
 }
 
