@@ -251,22 +251,21 @@ h2 {
 
 
 /* Skills Grid */
-/* Layout: no horizontal scroll; wraps to new lines if needed */
-/* Skills container */
+/* Skills grid: 2 rows, 5 per row */
 .skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;              /* space between boxes */
   max-width: 1500px;
   margin: 0 auto;
+  justify-items: center;
 }
 
-/* Card wrapper (glow size) */
+/* Glow wrapper */
 .box {
   position: relative;
-  width: 120px;  /* slightly wider */
-  height: 100px; /* taller so glow is more visible */
+  width: 160px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,60 +274,54 @@ h2 {
 }
 
 /* Glow behind */
-.box::before {
+.box::before,
+.box::after {
   content: '';
   position: absolute;
-  top: -10px;
+  top: 0;
   left: 0;
-  width: 70%;
-  height: 140%;   /* taller glow */
+  width: 100%;
+  height: 100%;
   background: linear-gradient(315deg, #ffbc00, #ff0058);
-  border-radius: 8px;
+  border-radius: 12px;
   transform: skewX(15deg);
   transition: 0.5s;
 }
 
 .box::after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 70%;
-  height: 140%;
-  background: linear-gradient(315deg, #ffbc00, #ff0058);
-  border-radius: 8px;
-  transform: skewX(15deg);
-  filter: blur(30px);
-  transition: 0.5s;
+  filter: blur(30px); /* blurred glow */
+  z-index: 0;
 }
 
-/* Hover → straightens */
+/* Hover effect → straighten */
 .box:hover::before,
 .box:hover::after {
   transform: skewX(0deg);
 }
 
-/* Frosted content (smaller than glow) */
+/* Glassy content */
 .box .content {
   position: relative;
-  width: 100px;
-  height: 70px;   /* smaller than glow */
+  width: 140px;      /* larger so text fits */
+  height: 100px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  border-radius: 8px;
+  border-radius: 10px;
   z-index: 1;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 10px;
 }
 
 /* Skill text */
 .box .content h2 {
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   margin: 0;
+  line-height: 1.4;
 }
 
 /* Projects */
