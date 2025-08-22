@@ -491,9 +491,10 @@ h2 {
   cursor: pointer;
   transition: 300ms ease;
   box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  background-color: #00ff88;
 }
 
-/* Different colors */
+/* Different colors if needed */
 .certificationcards .cercard {
   background-color: #fff01f; /* yellow-green */
 }
@@ -513,11 +514,20 @@ h2 {
   margin-top: 6px;
 }
 
-/* Hover only on the card itself */
+/* Hover effect on the card */
 .certificationcards .cercard:hover,
 .certificationcards .ocercard:hover {
   transform: scale(1.1);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
+}
+
+/* Blur ONLY siblings when one card is hovered */
+.certificationcards .cercard:hover ~ .cercard,
+.certificationcards .cercard:hover ~ .ocercard,
+.certificationcards .ocercard:hover ~ .cercard,
+.certificationcards .ocercard:hover ~ .ocercard {
+  filter: blur(4px);
+  transform: scale(0.9);
 }
 
 /* Contact Links */
