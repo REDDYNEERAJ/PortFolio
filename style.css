@@ -469,10 +469,48 @@ h2 {
   color: #e4f52f;
 }
 
+/* From Uiverse.io by kamehame-ha, customized */
+.certificationcards {
+  display: flex;
+  flex-wrap: wrap;    /* allows multiple rows */
+  gap: 20px;
+  justify-content: center;
+}
 
-/* Lists */
-ul li {
-  margin: 8px 0;
+.certificationcards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 120px;
+  width: 280px;
+  border-radius: 12px;
+  color: black;
+  cursor: pointer;
+  transition: 400ms;
+  background-color: #00ff88; /* neon green */
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+
+.certificationcards .card p.tip {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.certificationcards .card p.second-text {
+  font-size: 0.85em;
+  margin-top: 6px;
+}
+
+.certificationcards .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
+}
+
+.certificationcards:hover > .card:not(:hover) {
+  filter: blur(4px);
+  transform: scale(0.95);
 }
 
 /* Contact Links */
