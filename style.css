@@ -259,6 +259,7 @@ h2 {
   max-width: 1500px;
   margin-top: 50px;
   justify-items: center;
+  text-decoration: none !important;
 }
 
 /* Glow wrapper */
