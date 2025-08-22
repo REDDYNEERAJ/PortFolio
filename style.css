@@ -472,9 +472,9 @@ h2 {
 /* From Uiverse.io by kamehame-ha, customized */
 .certificationcards {
   display: flex;
-  flex-wrap: wrap;    /* allows multiple rows */
+  flex-direction: column;  /* stack in one column */
   gap: 20px;
-  justify-content: center;
+  align-items: center;     /* center horizontally */
 }
 
 .certificationcards .cercard {
