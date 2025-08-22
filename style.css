@@ -517,7 +517,7 @@ h2 {
 /* Hover effect on the card */
 .certificationcards .cercard:hover,
 .certificationcards .ocercard:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
 }
 
@@ -527,7 +527,7 @@ h2 {
 .certificationcards .ocercard:hover ~ .cercard,
 .certificationcards .ocercard:hover ~ .ocercard {
   filter: blur(4px);
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 /* Contact Links */
