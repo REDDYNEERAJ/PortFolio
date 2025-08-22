@@ -254,7 +254,7 @@ h2 {
 /* Layout: no horizontal scroll; wraps to new lines if needed */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
   justify-items: center;
 }
@@ -263,7 +263,7 @@ h2 {
 /* From Uiverse.io by Codewithvinay */ 
 .box {
  position: relative;
- width: 150px;
+ width: 100px;
  height: 90px;
  display: flex;
  justify-content: center;
@@ -371,7 +371,7 @@ h2 {
 
 .box .content {
  position: relative;
- width: 150px;
+ width: 100px;
  height: 75px;
  padding: 20px 40px;
  background: rgba(255, 255, 255, 0.05);
