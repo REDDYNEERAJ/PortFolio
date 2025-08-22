@@ -324,6 +324,47 @@ h2 {
   line-height: 1.4;
 }
 
+/* Decoration glassy boxes */
+.box span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Top-left small glassy */
+.box span::before {
+  content: '';
+  position: absolute;
+  top: -35px;        /* move above main box */
+  left: 35px;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Bottom-right small glassy */
+.box span::after {
+  content: '';
+  position: absolute;
+  bottom: -35px;     /* move below main box */
+  right: 35px;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
 /* Projects */
 /* From Uiverse.io by SouravBandyopadhyay */ 
 .card-container {
