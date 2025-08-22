@@ -489,26 +489,54 @@ h2 {
   color: black;
   cursor: pointer;
   transition: 400ms;
+  background-color: #fff01f; /* neon green */
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+.certificationcards .0cercard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 120px;
+  width: 280px;
+  border-radius: 12px;
+  color: black;
+  cursor: pointer;
+  transition: 400ms;
   background-color: #00ff88; /* neon green */
   box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
 }
-
 .certificationcards .cercard p.tip {
   font-size: 1.1em;
   font-weight: 700;
 }
-
+.certificationcards .ocercard p.tip {
+  font-size: 1.1em;
+  font-weight: 700;
+}
 .certificationcards .cercard p.second-text {
   font-size: 0.85em;
   margin-top: 6px;
 }
-
+.certificationcards .ocercard p.second-text {
+  font-size: 0.85em;
+  margin-top: 6px;
+}
 .certificationcards .cercard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
+}
+.certificationcards .ocercard:hover {
   transform: scale(1.1);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.9);
 }
 
 .certificationcards:hover > .cercard:not(:hover) {
+  filter: blur(4px);
+  transform: scale(0.95);
+}
+.certificationcards:hover > .ocercard:not(:hover) {
   filter: blur(4px);
   transform: scale(0.95);
 }
