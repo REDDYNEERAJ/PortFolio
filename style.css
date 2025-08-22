@@ -215,7 +215,7 @@ h2 {
 /* From Uiverse.io by prashantj510 */ 
 .aboutcard {
   width: 1500px;
-  height: 75px;
+  height: 150px;
   background-image: linear-gradient(163deg, #7bff00 0%, #ffee00 100%);
   border-radius: 10px;
   transition: all .3s;
@@ -223,7 +223,7 @@ h2 {
 
 .card2 {
   width: 1500px;
-  height: 75px;
+  height: 150px;
   background-color: #1a1a1a;
   border-radius: 10px;
   transition: all .2s;
