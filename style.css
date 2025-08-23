@@ -248,6 +248,20 @@ h2 {
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
 
+#education {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers all cards */
+}
+
+#education article {
+  width: 1000px;          /* card width */
+  margin-bottom: 75px;    /* gap between cards */
+}
+
+#education article p {
+  margin-left: 10px;      /* text inside card shifted */
+}
 
 
 /* Skills Grid */
